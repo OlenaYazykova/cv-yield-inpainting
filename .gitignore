@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+
+# Data — large rasters not tracked
+/data/
+/data_inference/
+
+# Training artifacts — models and logs not tracked
+artifacts/
+!artifacts/**/stats.json
+!artifacts/**/per_field_metrics.json
+!artifacts/**/optuna_best.json
+!artifacts/**/optuna_best_value.json
+
+mlruns/
+mlflow.db
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
