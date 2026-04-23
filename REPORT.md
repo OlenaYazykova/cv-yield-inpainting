@@ -559,9 +559,9 @@ All three models are trained with the same composite loss function:
 $$\mathcal{L} = \mathcal{L}_{missing} + w_{known} \cdot \mathcal{L}_{known} + w_{smooth} \cdot \mathcal{L}_{smooth}$$
 
 where:
-- $\mathcal{L}_{missing} = 0.5 \cdot \text{MSE}_{holes} + 0.5 \cdot \text{MAE}_{holes}$ — main loss computed exclusively on synthetic hole pixels
-- $\mathcal{L}_{known} = \text{MAE}_{known}$ — regularization term on observed pixels, prevents the model from ignoring known yield values
-- $\mathcal{L}_{smooth}$ — total variation penalty on predicted hole pixels, encourages spatial smoothness of reconstructed values
+- *L_missing = 0.5 · MSE(holes) + 0.5 · MAE(holes)* — main loss computed exclusively on synthetic hole pixels
+- *L_known* = MAE(known)* — regularization term on observed pixels, prevents the model from ignoring known yield values
+- *L_smooth* — total variation penalty on predicted hole pixels, encourages spatial smoothness of reconstructed values
 
 Default weights: $w_{known} = 0.1$, $w_{smooth} = 0.02$. For the Optuna-tuned
 model these weights are optimized during hyperparameter search.
